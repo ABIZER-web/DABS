@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Details</title>
+  <style>
+    body {
+      background: #f2f8ff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+      width: 600px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0d6efd;
+      text-decoration: underline;
+      margin-bottom: 25px;
+    }
+
+    .search-row {
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-row input[type="text"] {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .search-row button {
+      padding: 8px 18px;
+      background-color: #0d6efd;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .search-row button:hover {
+      background-color: #094db1;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .data-table th {
+      background-color: #b89b73;
+      color: #000;
+      padding: 10px;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .data-table td {
+      background-color: #f9f4e7;
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+
+    /* No content rows shown */
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Customer Details</h2>
+
+    <div class="search-row">
+      <label for="custId" style="line-height: 32px;">Cust ID :-</label>
+      <input type="text" id="custId" placeholder="">
+      <button>Search</button>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Uid</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Sex</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- No data rows -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

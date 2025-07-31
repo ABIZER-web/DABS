@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Doctor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f8ff, #e8f0fe);
+      margin: 0;
+      padding: 50px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 30px;
+      font-size: 26px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #2c3e50;
+    }
+
+    select,
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result-table {
+      margin-top: 40px;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    .result-table th,
+    .result-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .result-table th {
+      background-color: #f4a261;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .result-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+
+      .result-table th, .result-table td {
+        font-size: 13px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Search Doctor</h2>
+
+    <form>
+      <label for="searchBy">Search By :-</label>
+      <select id="searchBy" name="searchBy">
+        <option value="name">Name</option>
+        <option value="specialization">Specialization</option>
+        <option value="location">Location</option>
+      </select>
+
+      <label for="searchText">Text :-</label>
+      <input type="text" id="searchText" name="searchText" placeholder="Enter search text">
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <table class="result-table">
+      <thead>
+        <tr>
+          <th>DId</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data from backend will go here -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

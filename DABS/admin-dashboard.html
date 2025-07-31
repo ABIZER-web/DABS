@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+    }
+
+    .navbar {
+      display: flex;
+      background-color: #00aaff;
+      justify-content: space-around;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #008ecc;
+      border-radius: 4px;
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="add-doctor.html">Add Doctor</a>
+    <a href="view-doctor.html">View Doctor</a>
+    <a href="view-customer.html">View Customer</a>
+    <a href="view-appointments.html">View Appointments</a>
+    <a href="view-feedback.html">View Feedback</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <div class="content">
+    <h1>Welcome to the Admin Dashboard</h1>
+    <p>Select any option from the navbar to proceed.</p>
+  </div>
+
+</body>
+</html>

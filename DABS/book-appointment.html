@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Appointment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 2rem;
+    }
+
+    .appointment-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #0054d7;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.65rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .submit-btn, .book-btn {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 1rem;
+      background-color: #0054d7;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover, .book-btn:hover {
+      background-color: #0043b3;
+    }
+
+    .slots-section {
+      margin-top: 2rem;
+      display: none;
+    }
+
+    .slot-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 1rem 0;
+      justify-content: center;
+    }
+
+    .time-slot {
+      padding: 0.6rem 1rem;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .time-slot:hover {
+      background-color: #e0f0ff;
+      border-color: #0054d7;
+    }
+
+    .time-slot.selected {
+      background-color: #0054d7;
+      color: #fff;
+      border-color: #0054d7;
+    }
+
+    .break {
+      background-color: #0099cc;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    /* NEW: Booked slot styling */
+    .time-slot.booked {
+      background-color: #ccc;
+      color: #666;
+      border-color: #999;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="appointment-card">
+    <h2>New Booking</h2>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="appointment-id">Appointment ID</label>
+        <input type="text" id="appointment-id" value="1001" readonly />
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">-- Select --</option>
+          <option>Cardiologist</option>
+          <option>Dermatologist</option>
+          <option>Neurologist</option>
+          <option>Orthopedic</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="doctor">Doctor</label>
+        <select id="doctor" required>
+          <option value="">-- Select --</option>
+          <option>Dr. John Smith</option>
+          <option>Dr. Lisa Ray</option>
+          <option>Dr. Ankit Sharma</option>
+          <option>Dr. Priya Mehta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" required />
+      </div>
+
+      <button type="submit" class="submit-btn">Check</button>
+    </form>
+
+    <div class="slots-section" id="slots">
+      <h3 style="text-align:center; color:#0054d7;">Select Time Slot</h3>
+      
+      <div class="slot-row">
+        <div class="time-slot">9:00-9:30</div>
+        <div class="time-slot">9:30-10:00</div>
+        <div class="time-slot">10:00-10:30</div>
+        <div class="time-slot">10:30-11:00</div>
+        <div class="time-slot">11:00-11:30</div>
+        <div class="time-slot">11:30-12:00</div>
+      </div>
+
+      <div class="break">12:00 - 1:30 Break</div>
+
+      <div class="slot-row">
+        <div class="time-slot">1:30-2:00</div>
+        <div class="time-slot">2:00-2:30</div>
+        <div class="time-slot">2:30-3:00</div>
+        <div class="time-slot">3:00-3:30</div>
+        <div class="time-slot">3:30-4:00</div>
+        <div class="time-slot">4:00-4:30</div>
+      </div>
+
+      <div class="break">4:30 - 6:00 Break</div>
+
+      <div class="slot-row">
+        <div class="time-slot">6:00-6:30</div>
+        <div class="time-slot">6:30-7:00</div>
+        <div class="time-slot">7:00-7:30</div>
+        <div class="time-slot">7:30-8:00</div>
+        <div class="time-slot">8:00-8:30</div>
+        <div class="time-slot">8:30-9:00</div>
+      </div>
+
+      <button class="book-btn" type="button">Book</button>
+    </div>
+  </div>
+
+  <script>
+    const bookedSlots = {}; 
+    const slotsContainer = document.getElementById("slots");
+    const slots = document.querySelectorAll(".time-slot");
+    let selectedSlot = null;
+
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const date = document.getElementById("date").value;
+      if (!date) {
+        alert("Please select a date");
+        return;
+      }
+
+      // Reset selections
+      slots.forEach(s => {
+        s.classList.remove("selected", "booked");
+        s.style.pointerEvents = "auto";
+      });
+
+      // Grey out booked slots for selected date
+      if (bookedSlots[date]) {
+        bookedSlots[date].forEach(bookedTime => {
+          slots.forEach(s => {
+            if (s.textContent === bookedTime) {
+              s.classList.add("booked");
+            }
+          });
+        });
+      }
+
+      slotsContainer.style.display = "block";
+    });
+
+    // Select slot
+    slots.forEach(slot => {
+      slot.addEventListener("click", () => {
+        if (slot.classList.contains("booked")) return;
+        slots.forEach(s => s.classList.remove("selected"));
+        slot.classList.add("selected");
+        selectedSlot = slot.textContent;
+      });
+    });
+
+    // Book button
+    document.querySelector(".book-btn").addEventListener("click", () => {
+      const date = document.getElementById("date").value;
+      if (!selectedSlot) {
+        alert("Please select a time slot!");
+        return;
+      }
+
+      // Save booked slot
+      if (!bookedSlots[date]) bookedSlots[date] = [];
+      bookedSlots[date].push(selectedSlot);
+
+      // Mark as booked
+      slots.forEach(s => {
+        if (s.textContent === selectedSlot) {
+          s.classList.add("booked");
+          s.classList.remove("selected");
+        }
+      });
+
+      selectedSlot = null;
+      alert("Appointment booked successfully!");
+    });
+  </script>
+
+</body>
+</html>

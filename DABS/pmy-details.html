@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Details & Treatment History</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            font-weight: 500;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        textarea {
+            width: calc(100% - 130px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        textarea {
+            height: 60px;
+            resize: none;
+        }
+
+        button {
+            margin-left: 120px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4a261;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        @media (max-width: 600px) {
+            label {
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            textarea {
+                width: 100%;
+            }
+
+            button {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Details</h2>
+        <form>
+            <div class="form-group">
+                <label>User Id :-</label>
+                <input type="text" placeholder="User ID" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Name :-</label>
+                <input type="text" placeholder="Your Name">
+            </div>
+
+            <div class="form-group">
+                <label>Address :-</label>
+                <textarea placeholder="Your Address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Mobile No :-</label>
+                <input type="text" placeholder="Mobile Number">
+            </div>
+
+            <div class="form-group">
+                <label>Email :-</label>
+                <input type="text" placeholder="Email Address">
+            </div>
+
+            <button type="button">Update</button>
+        </form>
+
+        <h2 style="margin-top: 40px;">Treatment History</h2>
+        <table>
+            <tr>
+                <th>UId</th>
+                <th>Disease</th>
+                <th>Treatment</th>
+                <th>DNote</th>
+                <th>DateTime</th>
+            </tr>
+            <!-- Records will be shown here from database -->
+        </table>
+    </div>
+
+</body>
+</html>
