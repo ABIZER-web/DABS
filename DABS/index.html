@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Dfinder</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#find-doctor">Find a Doctor</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a href="#">Login ⌄</a>
+                <ul class="dropdown-menu">
+                  <li><a href="admin-login.html">Admin Login</a></li>
+                  <li><a href="doctor-login.html">Doctor Login</a></li>
+                  <li><a href="patient-login.html">Patient Login</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          
+        <button class="btn primary-btn">Book An Appointment</button>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Book Your Doctor Appointment Online.</h1>
+            <p>A Healthier Tomorrow Starts Today: Schedule Your Appointment!<br>Your Wellness, Our Expertise: Set Up
+                Your Appointment Today.</p>
+            <div class="hero-buttons">
+                <button class="btn white-btn">Book An Appointment</button>
+                <button class="btn outline-btn">📞 Call now</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="doctor.png" alt="Doctor" />
+        </div>
+    </section>
+
+    <section id="find-doctor" class="search-section">
+          <!-- Search Doctors -->
+          <div class="floating-input">
+            <input 
+              type="text" 
+              id="search" 
+              placeholder="🔍 Search by doctor, name, or specialist" 
+              onkeyup="liveSearch()" 
+              autocomplete="off" 
+              required 
+            />
+            <ul id="suggestions" class="suggestion-box"></ul>
+            <div id="doctor-result" class="result-box"></div>
+          </div>
+      
+        <!-- Results Section -->
+        
+      </section>
+      
+
+    </section>
+    <section id="services" class="services">
+
+        <section class="how-it-works">
+            <h2>How It Works!</h2>
+            <p>Discover, book, and experience personalized healthcare effortlessly with our user-friendly Doctor
+                Appointment Website.</p>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/10529/10529400.png" alt="Find a Doctor">
+                        <span class="step-number">1</span>
+                    </div>
+                    <h3>Find A Doctor</h3>
+                    <p>Discover skilled doctors based on specialization and location.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/747/747310.png" alt="Book Appointment">
+                        <span class="step-number">2</span>
+                    </div>
+                    <h3>Book Appointment</h3>
+                    <p>Effortlessly book appointments at your convenience.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3125/3125713.png" alt="Get Services">
+                        <span class="step-number">3</span>
+                    </div>
+                    <h3>Get Services</h3>
+                    <p>Receive personalized healthcare services tailored to your needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+              <h2>About Us</h2>
+              <p>
+                At <strong>DFinder</strong>, we connect patients with trusted doctors and specialists 
+                through a seamless and user-friendly platform. Our mission is to make healthcare 
+                more accessible, reliable, and efficient for everyone.
+              </p>
+            </div>
+          </section>
+          
+          <section id="contact" class="contact-section">
+            <div class="container">
+              <h2>Contact Us</h2>
+              <div class="contact-cards">
+                <div class="contact-card">
+                  <span class="icon">📧</span>
+                  <h3>Email</h3>
+                  <p><a href="mailto:info@dfinder.com">info@dfinder.com</a></p>
+                </div>
+          
+                <div class="contact-card">
+                  <span class="icon">📞</span>
+                  <h3>Phone</h3>
+                  <p><a href="tel:1234567890">123-456-7890</a></p>
+                </div>
+          
+                <div class="contact-card">
+                  <span class="icon">📍</span>
+                  <h3>Location</h3>
+                  <p>Mumbai, India</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+        <section class="doctor-marquee">
+            <div class="doctor-track">
+                <img src="images/doctor1.png" alt="Doctor" />
+                <img src="images/doctor2.png" alt="Doctor" />
+                <img src="images/doctor3.png" alt="Doctor" />
+                <img src="images/doctor4.png" alt="Doctor" />
+                <img src="images/doctor5.png" alt="Doctor" />
+                <img src="images/doctor6.png" alt="Doctor" />
+                <img src="images/doctor7.png" alt="Doctor" />
+                <img src="images/doctor8.png" alt="Doctor" />
+                <img src="images/doctor9.png" alt="Doctor" />
+                <img src="images/doctor10.png" alt="Doctor" />
+                <img src="images/doctor11.png" alt="Doctor" />
+                <img src="images/doctor12.png" alt="Doctor" />
+                <img src="images/doctor13.png" alt="Doctor" />
+                <img src="images/doctor14.png" alt="Doctor" />
+                <img src="images/doctor15.png" alt="Doctor" />
+                <img src="images/doctor16.png" alt="Doctor" />
+                <img src="images/doctor17.png" alt="Doctor" />
+                <img src="images/doctor18.png" alt="Doctor" />
+                <img src="images/doctor19.png" alt="Doctor" />
+                <img src="images/doctor20.png" alt="Doctor" />
+                <img src="images/doctor1.png" alt="Doctor" />
+                <img src="images/doctor2.png" alt="Doctor" />
+                <img src="images/doctor3.png" alt="Doctor" />
+                <img src="images/doctor4.png" alt="Doctor" />
+                <img src="images/doctor5.png" alt="Doctor" />
+                <img src="images/doctor6.png" alt="Doctor" />
+                <img src="images/doctor7.png" alt="Doctor" />
+                <img src="images/doctor8.png" alt="Doctor" />
+                <img src="images/doctor9.png" alt="Doctor" />
+                <img src="images/doctor10.png" alt="Doctor" />
+                <img src="images/doctor11.png" alt="Doctor" />
+                <img src="images/doctor12.png" alt="Doctor" />
+                <img src="images/doctor13.png" alt="Doctor" />
+                <img src="images/doctor14.png" alt="Doctor" />
+                <img src="images/doctor15.png" alt="Doctor" />
+                <img src="images/doctor16.png" alt="Doctor" />
+                <img src="images/doctor17.png" alt="Doctor" />
+                <img src="images/doctor18.png" alt="Doctor" />
+                <img src="images/doctor19.png" alt="Doctor" />
+                <img src="images/doctor20.png" alt="Doctor" />
+              </div>
+              
+        </section>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #00aaff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      left: -220px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 1rem 1.5rem;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #008ecc;
+      border-radius: 4px;
+      margin: 0 1rem;
+    }
+
+    .content {
+      margin-left: 0;
+      padding: 2rem;
+      flex: 1;
+      text-align: center;
+      width: 100%;
+      transition: margin-left 0.3s ease;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .close-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hamburger Menu Icon -->
+  <div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+    <a href="add-doctor.html">Add Doctor</a>
+    <a href="view-doctor.html">View Doctor</a>
+    <a href="dview-customer.html">View Customer</a>
+    <a href="view-appointments.html">View Appointments</a>
+    <a href="view-feedback.html">View Feedback</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Welcome to the Admin Dashboard</h1>
+    <p>Select any option from the sidebar to proceed.</p>
+  </div>
+
+  <!-- JavaScript for toggle -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

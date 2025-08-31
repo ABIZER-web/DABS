@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View My Details</title>
+  <style>
+    body {
+      background-color: #f0f7ff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e88e5;
+      text-decoration: underline;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 60px;
+    }
+
+    .btn {
+      margin-top: 25px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #43a047;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>View My Details</h2>
+
+    <form>
+      <label>Doctor Id :-</label>
+      <input type="text" placeholder="">
+
+      <label>Name :-</label>
+      <input type="text" placeholder="">
+
+      <label>Address :-</label>
+      <textarea placeholder=""></textarea>
+
+      <label>Mobile :-</label>
+      <input type="text" placeholder="">
+
+      <label>Category :-</label>
+      <input type="text" placeholder="">
+
+      <button class="btn" type="submit">Update</button>
+    </form>
+  </div>
+
+</body>
+</html>

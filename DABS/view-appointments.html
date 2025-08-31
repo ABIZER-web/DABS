@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointments</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .table-wrapper {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #c9a53b;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9d1;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #fff;
+    }
+
+    a.delete-link {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.delete-link:hover {
+      text-decoration: underline;
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-wrapper">
+    <h2>Appointments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Doctor Name</th>
+          <th>Appointment Date</th>
+          <th>Appointment Time</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample row (replace with backend loop like Flask or PHP) -->
+        <!-- 
+        <tr>
+          <td>1001</td>
+          <td>Doctor Name</td>
+          <td>29-05-15</td>
+          <td>2:30-3:00</td>
+          <td><a href="#" class="delete-link">Delete</a></td>
+        </tr>
+        -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
